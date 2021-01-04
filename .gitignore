@@ -1,0 +1,6 @@
+.DS_Store
+build-fprime-*
+*AppDictionary.xml
+*AppID.csv
+*IDTableLog.txt
+logs
