@@ -39,4 +39,8 @@ namespace fsw {
         return gst;
         // could code possibly generate
     }
+
+    float test(){
+
+    }
 }
