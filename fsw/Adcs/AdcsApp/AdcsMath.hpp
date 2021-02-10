@@ -33,10 +33,8 @@ namespace fsw {
 
         extern const double PI;
 
-        // Julian Date
-        float getJulianDate(); 
-        float getJulianDate(int year, int month, int day, int hour, int min, int sec); 
-
+        float getJulianDate(int year, int month, int day, int hour, int min, int sec); // Julian Date
+        mat4 getPolarMotionMatrix(); // Polar Motion Matrix
         float getGreenwichSiderealTime(int julianDate); // Greenwich Sidereal Time
 
     private:
