@@ -1,0 +1,57 @@
+<component name="CameraMgr" kind="queued" namespace="Ref">
+    <import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
+    <comment>Component to handle Camera operations</comment>
+    <ports>
+        <port name="SchedIn" data_type="Sched" kind="sync_input">
+            <comment>
+            The rate group scheduler input
+            </comment>
+        </port>
+    </ports>
+    <commands>
+        <command kind="async" opcode="0" mnemonic="CM_SET_RESOLUTION">
+            <comment>
+            Set picture resolution 
+            </comment>
+            <args>
+                <arg name="width" type="I16">
+                    <comment>width pixel length</comment>
+                </arg>     
+                <arg name="height" type="I16">
+                    <comment>height pixel length</comment>
+                </arg>      
+             </args>
+        </command>
+        <command kind="async" opcode="0" mnemonic="CM_SET_FORMAT">
+            <comment>
+            Set picture format 
+            </comment>
+            <args>
+                <arg name="format" type="ENUM">
+                    <enum name="CamFormat">
+                        <item name="RAW"/>
+                        <item name="RAW10"/>
+                        <item name="JPEG"/>           
+                        <item name="DNG"/>           
+                    </enum>
+                    <comment>Picture format</comment>
+                </arg>   
+             </args>
+        </command>
+        <command kind="async" opcode="0" mnemonic="CM_SET_PICTURE_NUMBER">
+            <comment>
+            Set amount of pictures to be taken in sequence 
+            </comment>
+            <args>
+                <arg name="value" type="I16">
+                    <comment>Amount of pictures to be taken in sequence</comment>
+                </arg>     
+             </args>
+        </command>
+        <command kind="async" opcode="1" mnemonic="MR_CLEAR_EVENT_THROTTLE">
+            <comment>Clear the event throttle
+            </comment>
+        </command>
+    </commands>
+    
+</component>
