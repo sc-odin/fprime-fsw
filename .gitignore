@@ -4,3 +4,5 @@ build-fprime-*
 *AppID.csv
 *IDTableLog.txt
 logs
+.idea
+cmake-build-debug
