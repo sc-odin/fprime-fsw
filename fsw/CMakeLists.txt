@@ -25,6 +25,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/../cmake/FPrime-Code.cmake")
 # Section 3: Components and Topology
 ##
 # Add component subdirectories
+add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/Payload/")
 
 # Add Topology subdirectory
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/Top/")

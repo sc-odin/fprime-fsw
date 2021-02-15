@@ -1,13 +1,6 @@
-<component name="CameraMgr" kind="queued" namespace="Ref">
+<component name="CameraMgr" kind="passive" namespace="Ref">
     <import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
     <comment>Component to handle Camera operations</comment>
-    <ports>
-        <port name="SchedIn" data_type="Sched" kind="sync_input">
-            <comment>
-            The rate group scheduler input
-            </comment>
-        </port>
-    </ports>
     <commands>
         <command kind="async" opcode="0" mnemonic="CM_SET_RESOLUTION">
             <comment>
@@ -38,6 +31,16 @@
                 </arg>   
              </args>
         </command>
+        <command kind="async" opcode="0" mnemonic="CM_SET_DELAY">
+            <comment>
+                Delay between pictures in millisecods
+            </comment>
+            <args>
+                <arg name="value" type="I16">
+                    <comment>Value of the delay</comment>
+                </arg>
+            </args>
+        </command>
         <command kind="async" opcode="0" mnemonic="CM_SET_PICTURE_NUMBER">
             <comment>
             Set amount of pictures to be taken in sequence 
@@ -48,10 +51,5 @@
                 </arg>     
              </args>
         </command>
-        <command kind="async" opcode="1" mnemonic="MR_CLEAR_EVENT_THROTTLE">
-            <comment>Clear the event throttle
-            </comment>
-        </command>
     </commands>
-    
 </component>
